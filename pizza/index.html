@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Document</title>
+  <style>
+    .mySlides {
+      display: none;
+
+    }
+
+    body {
+      background-color: yellow;
+    }
+
+    nav {
+      position: fixed;
+      left: 0px;
+      margin: 0 auto;
+      width: 100%;
+
+    }
+
+    nav ul {
+      list-style-type: none;
+      text-align: right;
+
+    }
+
+    nav ul li {
+      display: inline-block;
+      text-align: center;
+      padding: 20px;
+      height: 2%;
+      font-size: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+
+    }
+
+    nav ul li img {
+      text-align: left;
+    }
+    footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color:black;
+   color: white;
+   text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <img src="Images/logo.png" align="left" width="200" height="100">
+        <li><a href="new_account.html">Home</a></li>
+        <li><a href="withdraw.html">About</a></li>
+        <li><a href="deposite.html">News</a></li>
+        <li><a href="fund_transfer.html">Menu</a></li>
+        <li><a href="check_balance.html">Locations</a></li>
+        <li><a href="display.html">Bookings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div style="padding-top: 140px;margin-left: 20px;">
+    <img class="mySlides" src="Images/img1.jfif" height="300" width="1400">
+    <img class="mySlides" src="Images/img2.jfif" height="300" width="1400">
+    <img class="mySlides" src="Images/img3.jfif" height="300" width="1400">
+  </div>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+  </script>
+  <div class="container" style="margin-top: 15px;">
+    <article >
+      <section style="background-color: white; margin-left: 20px; width: 45%; height: 55%; float: left; ">
+      <h1>Mojo's Pizza</h1>
+      <p>
+        &nbsp; At Mojo's Pizza, we offer only one size - a 10 Inch medium pizza.
+      </p>
+      <p>&nbsp; Order pizza online in Mumbai, Pune and Bangalore delivered to your &nbsp;home. Pay online or cash on
+        delivery. Superb late night delivery till 1:00 &nbsp;AM.</p>
+      </section>
+   <aside style="background-color:cyan; margin-right: 20px; width: 45%; height: 55%; float:  right ">
+
+    <h1>Toppings</h1>
+      <p>
+        &nbsp; We love pizzas and what we love most about pizzas are the utterly delicious toppings.
+        But we often wonder, why do most Pizzas today come with so less toppings?<br> &nbsp; Well we don't really know!
+        but we wanted more so we did it ourselves.
+      </p>
+    </aside>
+    </article>
+
+  </div>
+<footer> 
+  
+      Copyright &copy; 2019, Mojo Pizzas, Mumbai, Maharashtra 
+  
+
+</footer>
+</body>
+
+</html>
